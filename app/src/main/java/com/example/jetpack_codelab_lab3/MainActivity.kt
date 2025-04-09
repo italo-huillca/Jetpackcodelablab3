@@ -77,3 +77,26 @@ fun TarjetaDePresentacion() {
         InfoDeContacto()
     }
 }
+@Composable
+fun FilaDeContacto(icon: androidx.compose.ui.graphics.vector.ImageVector, texto: String) {
+    Row(
+        verticalAlignment = Alignment.CenterVertically,
+        modifier = Modifier
+            .fillMaxWidth()
+            .background(color = Color(0xFFE8F5E9), shape = RoundedCornerShape(8.dp))
+            .padding(vertical = 8.dp, horizontal = 12.dp)
+    ) {
+        Icon(
+            imageVector = icon,
+            contentDescription = null,
+            tint = Color(0xFF007F3B),
+            modifier = Modifier.size(20.dp)
+        )
+        Spacer(modifier = Modifier.width(12.dp))
+        Text(
+            text = texto,
+            fontSize = 14.sp,
+            color = Color(0xFF1B1B1B)
+        )
+    }
+}
