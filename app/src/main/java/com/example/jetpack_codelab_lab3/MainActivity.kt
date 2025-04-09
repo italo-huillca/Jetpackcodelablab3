@@ -34,15 +34,13 @@ import androidx.core.view.WindowCompat
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+        WindowCompat.setDecorFitsSystemWindows(window, false)
         setContent {
-            Jetpackcodelablab3Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+            Surface(
+                modifier = Modifier.fillMaxSize(),
+                color = Color(0xFFDFF5E3) // Fondo verde claro
+            ) {
+                TarjetaDePresentacion()
             }
         }
     }
