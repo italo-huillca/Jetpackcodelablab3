@@ -45,3 +45,35 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+@Composable
+fun TarjetaDePresentacion() {
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        val logo: Painter = painterResource(id = R.drawable.pfp) // Asegúrate de tener el logo en drawable
+        Image(
+            painter = logo,
+            contentDescription = "Logo de Android",
+            modifier = Modifier.size(100.dp)
+        )
+        Spacer(modifier = Modifier.height(16.dp))
+        Text(
+            text = "Italo Huillca",
+            fontSize = 26.sp,
+            fontWeight = FontWeight.Bold,
+            color = Color(0xFF1B1B1B)
+        )
+        Text(
+            text = "Desarrollador Android",
+            fontSize = 16.sp,
+            color = Color(0xFF007F3B),
+            fontWeight = FontWeight.Medium
+        )
+        Spacer(modifier = Modifier.height(32.dp))
+        InfoDeContacto()
+    }
+}
