@@ -100,3 +100,17 @@ fun FilaDeContacto(icon: androidx.compose.ui.graphics.vector.ImageVector, texto:
         )
     }
 }
+@Composable
+fun InfoDeContacto() {
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 32.dp),
+        verticalArrangement = Arrangement.spacedBy(12.dp),
+        horizontalAlignment = Alignment.Start
+    ) {
+        FilaDeContacto(Icons.Default.Phone, "953 760 542")
+        FilaDeContacto(Icons.Default.Share, "@italo-huillca")
+        FilaDeContacto(Icons.Default.Email, "italo.huillca@gmail.com")
+    }
+}
